@@ -1,0 +1,34 @@
+QR-code/qr-code/qr-code-component-main
+
+QR-code/qr-code/node_modules
+QR-code/qr-code/.pnp
+QR-code/qr-code/.pnp.js
+
+# testing
+QR-code/qr-code/coverage
+
+# next.js
+QR-code/qr-code/.next/
+QR-code/qr-code/out/
+
+# production
+QR-code/qr-code/build
+
+# misc
+QR-code/qr-code/.DS_Store
+QR-code/qr-code/*.pem
+
+# debug
+QR-code/qr-code/npm-debug.log*
+QR-code/qr-code/yarn-debug.log*
+QR-code/qr-code/yarn-error.log*
+
+# local env files
+QR-code/qr-code/.env*.local
+
+# vercel
+QR-code/qr-code/.vercel
+
+# typescript
+QR-code/qr-code/*.tsbuildinfo
+QR-code/qr-code/next-env.d.ts
