@@ -32,3 +32,38 @@ QR-code/qr-code/.vercel
 # typescript
 QR-code/qr-code/*.tsbuildinfo
 QR-code/qr-code/next-env.d.ts
+
+Article-Preview/Article-Preview/Article-Preview-component-main
+
+Article-Preview/Article-Preview/node_modules
+Article-Preview/Article-Preview/.pnp
+Article-Preview/Article-Preview/.pnp.js
+
+# testing
+Article-Preview/Article-Preview/coverage
+
+# next.js
+Article-Preview/Article-Preview/.next/
+Article-Preview/Article-Preview/out/
+
+# production
+Article-Preview/Article-Preview/build
+
+# misc
+Article-Preview/Article-Preview/.DS_Store
+Article-Preview/Article-Preview/*.pem
+
+# debug
+Article-Preview/Article-Preview/npm-debug.log*
+Article-Preview/Article-Preview/yarn-debug.log*
+Article-Preview/Article-Preview/yarn-error.log*
+
+# local env files
+Article-Preview/Article-Preview/.env*.local
+
+# vercel
+Article-Preview/Article-Preview/.vercel
+
+# typescript
+Article-Preview/Article-Preview/*.tsbuildinfo
+Article-Preview/Article-Preview/next-env.d.ts
