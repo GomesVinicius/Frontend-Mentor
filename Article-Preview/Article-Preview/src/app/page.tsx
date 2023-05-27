@@ -1,11 +1,18 @@
-import Image from "next/image"
+'use client';
+import Image from "next/image";
 
-import avatar from './assets/avatar-michelle.jpg'
-import drawers from './assets/drawers.jpg'
-import share from './assets/icon-share.svg'
+import { useState } from "react";
+import avatar from './assets/avatar-michelle.jpg';
+import drawers from './assets/drawers.jpg';
+import share from './assets/icon-share.svg';
+import Tooltip from "./tooltip";
 
 export default function Home() {
+  const [mouseEnter, setMouseEnter] = useState(false)
 
+  const mouseHover = () => {
+    setMouseEnter(!mouseEnter)
+  }
 
   return (
     <main className="flex justify-center items-center h-screen bg-gray-200">
@@ -22,7 +29,8 @@ export default function Home() {
                 <div className="pl-4 text-gray-400">28 Jun 2020</div>
               </div>
             </div>
-            <div className="bg-gray-200 rounded-3xl w-10 h-10 flex items-center justify-center pb-1">
+            <div className="bg-gray-200 rounded-3xl w-10 h-10 flex items-center justify-center pb-1" onMouseEnter={() => mouseHover()} onMouseLeave={() => mouseHover()}>
+              {true ? <Tooltip /> : null}
               <Image className="self-center" src={share} alt="" width={20} height={20}/>
             </div>
           </div>
