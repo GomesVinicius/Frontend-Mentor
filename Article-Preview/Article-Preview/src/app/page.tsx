@@ -8,10 +8,10 @@ import share from './assets/icon-share.svg';
 import Tooltip from "./tooltip";
 
 export default function Home() {
-  const [mouseEnter, setMouseEnter] = useState(false)
+  const [showTooltip, setShowToolTip] = useState(false)
 
   const mouseHover = () => {
-    setMouseEnter(!mouseEnter)
+    setShowToolTip(!showTooltip)
   }
 
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         <Image style={{objectFit: "cover"}} src={drawers} alt="" className="w-96 rounded-l-2xl" />
         <div className="bg-white h-full rounded-r-2xl flex justify-between items-center flex-col p-12">
           <div className="font-bold text-2xl text-gray-600">Shift the overall look and feel by adding these wonderful touches to furniture in your home</div>
-          <div className="font-normal text-gray-400">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. Ive got some simple tips to help you make any room feel complete.</div>
+          <div className="font-normal text-gray-400">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting.Ive got some simple tips to help you make any room feel complete.</div>
           <div className="flex justify-between items-center w-full">
             <div className="flex justify-between items-center">
               <Image src={avatar} alt="" className="h-10 w-10 rounded-3xl" />
@@ -29,10 +29,12 @@ export default function Home() {
                 <div className="pl-4 text-gray-400">28 Jun 2020</div>
               </div>
             </div>
-            <div className="bg-gray-200 rounded-3xl w-10 h-10 flex items-center justify-center pb-1" onMouseEnter={() => mouseHover()} onMouseLeave={() => mouseHover()}>
-              {true ? <Tooltip /> : null}
-              <Image className="self-center" src={share} alt="" width={20} height={20}/>
-            </div>
+              <div className="bg-gray-200 rounded-3xl w-10 h-10 flex items-center justify-center pb-1 hover:bg-gray-800"
+                onClick={() => mouseHover()}
+              >
+                <Tooltip visible={showTooltip} />
+                <Image src={share} alt="" width={20} height={20}/>
+              </div>
           </div>
         </div>
       </div>
