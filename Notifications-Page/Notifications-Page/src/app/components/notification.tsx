@@ -33,12 +33,14 @@ const Notification: React.FC<NotificationProps> = (
         <div className="flex justify-start items-start gap-1 flex-col">
           <div className="flex justify-start items-start gap-1">
             <p>
-              <span className="text-blue-700 font-black">{props.name}</span>{' '}
+              <span className="text-blue-700 font-black cursor-pointer hover:text-blue-800">
+                {props.name}
+              </span>{' '}
               <span className="text-blue-600 font-medium">{props.action}</span>{' '}
               <span
                 className={`${
                   props.group ? 'text-blue-900' : 'text-blue-600'
-                } font-extrabold`}
+                } font-extrabold cursor-pointer hover:text-blue-800`}
               >
                 {props.origin}
               </span>
@@ -49,7 +51,7 @@ const Notification: React.FC<NotificationProps> = (
           </div>
           <p className="text-blue-500 font-medium">{props.timeEvent}</p>
           {props.message ? (
-            <div className="border-[1px] p-4 border-blue-300 rounded">
+            <div className="border-[1px] p-4 border-blue-300 rounded cursor-pointer hover:bg-blue-200 hover:border-blue-200">
               <p className="text-blue-600 font-medium">{props.message}</p>
             </div>
           ) : null}
@@ -61,7 +63,7 @@ const Notification: React.FC<NotificationProps> = (
             alt="Chess Image"
             height={48}
             width={48}
-            className="right-0"
+            className="right-0 cursor-pointer hover:outline hover:outline-gray-300 hover:outline-offset-0 hover:rounded-lg hover:shadow-image "
           />
         ) : null}
       </div>

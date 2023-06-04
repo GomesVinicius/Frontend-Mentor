@@ -26,6 +26,9 @@ module.exports = {
           700: '#1c202b',
         },
       },
+      boxShadow: {
+        image: '0px 0px 8px 1px rgba(0, 0, 0,0.9)',
+      },
     },
   },
   plugins: [],

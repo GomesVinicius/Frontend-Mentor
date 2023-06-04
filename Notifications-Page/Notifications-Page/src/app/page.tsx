@@ -12,7 +12,7 @@ import PlayingChess from '../assets/image-chess.webp'
 export default function Home() {
   return (
     <main className="bg-blue-100 h-screen flex justify-center items-center">
-      <div className="bg-white h-[52rem] w-[50rem] rounded-xl">
+      <div className="bg-white h-[53rem] w-[50rem] rounded-xl shadow-sm">
         <div className="flex justify-between items-center m-8">
           <p className="text-black font-black text-2xl">
             Notifications{' '}
@@ -20,7 +20,9 @@ export default function Home() {
               3
             </span>
           </p>
-          <p className="text-blue-600 font-medium">Mark all as read</p>
+          <p className="text-blue-600 font-semibold hover:text-blue-800 cursor-pointer">
+            Mark all as read
+          </p>
         </div>
         <div className="m-8 flex justify-items-start gap-2 items-start flex-col h-auto">
           <Notification
