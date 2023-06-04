@@ -1,24 +1,79 @@
 import Notification from './components/notification'
 
-import ImageName from '../assets/avatar-mark-webber.webp'
+import AngelaGray from '../assets/avatar-angela-gray.webp'
+import AnnaKim from '../assets/avatar-anna-kim.webp'
+import JacobThompson from '../assets/avatar-jacob-thompson.webp'
+import KimberlySmith from '../assets/avatar-kimberly-smith.webp'
+import MarkWebber from '../assets/avatar-mark-webber.webp'
+import NathanPeterson from '../assets/avatar-nathan-peterson.webp'
+import RizkyHasanuddin from '../assets/avatar-rizky-hasanuddin.webp'
+import PlayingChess from '../assets/image-chess.webp'
 
 export default function Home() {
   return (
     // bg-gray-300
     <main className="bg-gray-900 h-screen flex justify-center items-center">
       {/* bg-white */}
-      <div className="bg-gray-500 h-[54rem] w-[50rem] rounded-xl">
+      <div className="bg-gray-500 h-[52rem] w-[50rem] rounded-xl">
         <div className="flex justify-between items-center m-8">
           <p className="text-black font-bold">Notifications 3</p>
           <p className="text-black">Mark all read</p>
         </div>
-
         <div className="m-8 flex justify-between items-start flex-col h-full">
           <Notification
-            name="Mark Weber"
+            image={MarkWebber}
+            name="Mark Webber"
+            timeEvent="1m ago"
             action="reacted to your recent posto"
-            message="My first tournament today!"
-            image={ImageName}
+            origin="My first tournament today!"
+            read={false}
+          />
+          <Notification
+            image={AngelaGray}
+            name="Angela Gray"
+            timeEvent="5m ago"
+            action="followed you"
+            read={false}
+          />
+          <Notification
+            image={JacobThompson}
+            name="Jacob Thompson"
+            timeEvent="1 day ago"
+            action="has joined your group"
+            origin="Chess Club"
+            read={false}
+          />
+          <Notification
+            image={RizkyHasanuddin}
+            name="Rizky Hasanuddin"
+            timeEvent="5 day ago"
+            action="sent you a private message"
+            message="Hello, thanks for setting up the Chess Club."
+            read={true}
+          />
+          <Notification
+            image={KimberlySmith}
+            name="Kimberly Smith"
+            timeEvent="1 week ago"
+            action="commented on your picture"
+            imageReacted={PlayingChess}
+            read={true}
+          />
+          <Notification
+            image={NathanPeterson}
+            name="Nathan Peterson"
+            timeEvent="2 week ago"
+            action="reacted to your recent post"
+            origin="5 end-game strategies to increase your win rate"
+            read={true}
+          />
+          <Notification
+            image={AnnaKim}
+            name="Anna Kim"
+            timeEvent="2 week ago"
+            action="left the group"
+            origin="Chess Club"
+            read={true}
           />
         </div>
       </div>
