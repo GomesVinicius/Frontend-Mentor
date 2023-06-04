@@ -11,15 +11,18 @@ import PlayingChess from '../assets/image-chess.webp'
 
 export default function Home() {
   return (
-    // bg-gray-300
-    <main className="bg-gray-900 h-screen flex justify-center items-center">
-      {/* bg-white */}
-      <div className="bg-gray-500 h-[52rem] w-[50rem] rounded-xl">
+    <main className="bg-blue-100 h-screen flex justify-center items-center">
+      <div className="bg-white h-[52rem] w-[50rem] rounded-xl">
         <div className="flex justify-between items-center m-8">
-          <p className="text-black font-bold">Notifications 3</p>
-          <p className="text-black">Mark all read</p>
+          <p className="text-black font-black text-2xl">
+            Notifications{' '}
+            <span className="bg-blue-900 pl-3 pr-3 pt-[0.1rem] pb-[0.1rem] rounded text-white font-black text-base">
+              3
+            </span>
+          </p>
+          <p className="text-blue-600 font-medium">Mark all as read</p>
         </div>
-        <div className="m-8 flex justify-between items-start flex-col h-full">
+        <div className="m-8 flex justify-items-start gap-2 items-start flex-col h-auto">
           <Notification
             image={MarkWebber}
             name="Mark Webber"
@@ -42,13 +45,14 @@ export default function Home() {
             action="has joined your group"
             origin="Chess Club"
             read={false}
+            group={true}
           />
           <Notification
             image={RizkyHasanuddin}
             name="Rizky Hasanuddin"
             timeEvent="5 day ago"
             action="sent you a private message"
-            message="Hello, thanks for setting up the Chess Club."
+            message="Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
             read={true}
           />
           <Notification
@@ -74,6 +78,7 @@ export default function Home() {
             action="left the group"
             origin="Chess Club"
             read={true}
+            group={true}
           />
         </div>
       </div>
